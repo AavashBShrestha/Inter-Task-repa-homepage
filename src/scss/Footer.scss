@@ -1,0 +1,198 @@
+@use "sass:color";
+@import url("https://fonts.cdnfonts.com/css/canela-text-trial");
+
+$font-canela: "Canela Trial", system-ui, sans-serif;
+$font-inter: "Inter", system-ui, sans-serif;
+$primary-color: rgba(255, 255, 255, 1);
+$hero-secondary-color: rgba(255, 255, 255, 0.75);
+$scroll-indicator-color: rgba(255, 255, 255, 1);
+$aboutrepa-title-color: rgba(195, 98, 2, 1);
+$aboutrepa-primary-color: rgba(59, 39, 19, 1);
+$aboutrepa-description-color: rgba(73, 73, 73, 1);
+$aboutrepa-description-color-hover: rgba(0, 0, 0, 1);
+$aboutrepa-button-color-hover: rgba(59, 39, 19, 1);
+$aboutrepa-button-backgroundcolor: rgba(166, 109, 53, 1);
+$aboutrepa-button-backgroundcolor-hover: rgba(255, 255, 255, 1);
+$service-title-color: rgba(244, 238, 231, 1);
+$service-backgroundcolor: rgba(0, 0, 0, 1);
+$service-button-color: rgba(59, 39, 19, 1);
+
+
+.footer {
+  position: relative;
+  background: #f4eee7;
+  padding: 120px 180px 80px;
+  overflow: hidden;
+  border-top: 1px solid rgba(166, 109, 53, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @media (max-width: 1100px) {
+    padding: 100px 60px 60px;
+  }
+
+  &__wave {
+    position: absolute;
+    top: 138px;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    background: url("../assets/icon/footerwave.svg") no-repeat left top;
+    
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+    gap: 40px;
+    align-items: start;
+    z-index: 1;
+
+    @media (max-width: 992px) {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    h4 {
+      margin: 0;
+      font-family: $font-canela;
+      font-weight: 400;
+      color: $service-button-color;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 0;
+      font-family: $font-inter;
+      color: $aboutrepa-primary-color;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__logo {
+    width: 74px;
+    height: auto;
+  }
+
+  &__social {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+
+    a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: $service-button-color;
+      font-family: $font-inter;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+      }
+    }
+  }
+
+  &__links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 12px 18px;
+
+    a {
+      font-family: $font-inter;
+      color: $service-button-color;
+      font-size: 16px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $aboutrepa-button-color-hover;
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: $font-inter;
+    color: $service-button-color;
+    font-size: 16px;
+
+    h4 {
+      margin: 0 0 6px;
+      font-family: $font-canela;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+    p {
+      margin: 0;
+      line-height: 24px;
+    }
+  }
+
+  &__scroll {
+    justify-self: end;
+    align-self: start;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    border: 1px solid rgba(166, 109, 53, 0.4);
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: $font-inter;
+    color: $service-button-color;
+    font-size: 14px;
+    border-top: 1px solid rgba(166, 109, 53, 0.3);
+    padding-top: 24px;
+    z-index: 1;
+
+    @media (max-width: 640px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

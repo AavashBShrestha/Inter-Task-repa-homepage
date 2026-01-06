@@ -9,8 +9,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./scss/Index.scss";
 import "./scss/Header.scss";
 import "./scss/Home.scss";
+import "./scss/footer.scss";
 
 import Header from "./components/Header.jsx";
+import Footer from "./components/Footer";
 import Index from "./pages/Home";
 
 library.add(fas, fab);
@@ -28,6 +30,7 @@ function Content() {
           <Route path="/" element={<Index />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }
