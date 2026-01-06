@@ -62,6 +62,40 @@ p {
   }
 }
 
+@media (max-width: 1200px) {
+  .hero__text {
+    padding-right: 80px;
+  }
+
+  .hero__header h1 {
+    font-size: 72px;
+    line-height: 78px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero__text {
+    padding-right: 0;
+    padding: 0 24px;
+  }
+
+  .hero__header h1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .hero__description p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+
 .pageScrollIndicator {
   text-align: center;
   svg {
@@ -444,6 +478,58 @@ p {
   }
 }
 
+@media (max-width: 992px) {
+  .AboutRepaRetreat {
+    padding: 100px 40px;
+  }
+
+  .AboutRepaRetreat h1,
+  .AboutRepaRetreat h2 {
+    font-size: 52px;
+    line-height: 62px;
+    padding: 0;
+  }
+
+  .AboutRepaRetreat__description-paragraph {
+    padding: 32px 0 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .AboutRepaRetreat h1,
+  .AboutRepaRetreat h2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .services,
+  .services__backgroundImage {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .services__content {
+    flex-direction: column;
+    gap: 40px;
+    padding: 80px 24px;
+    text-align: center;
+  }
+
+  .services__left {
+    align-items: center;
+  }
+
+  .services__right {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+
 .quote {
   background: url("../assets/Banner/Rectangle\ 39.png");
   background-repeat: no-repeat;
@@ -484,6 +570,27 @@ p {
     bottom: -3px;
   }
 }
+@media (max-width: 1200px) {
+  .quote__text {
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 40px;
+  }
+
+  .quote__text p {
+    font-size: 40px;
+    line-height: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote__text p {
+    font-size: 28px;
+    line-height: 38px;
+  }
+}
+
 
 .upcoming {
   position: relative;
@@ -639,6 +746,23 @@ p {
     background-color: rgba(166, 109, 53, 0.1);
   }
 }
+
+@media (max-width: 992px) {
+  .upcoming {
+    flex-direction: column;
+    padding: 80px 40px;
+    gap: 60px;
+  }
+
+  .upcoming__body {
+    grid-template-columns: 1fr;
+  }
+
+  .upcoming__image {
+    height: 420px;
+  }
+}
+
 
 .repaProgram {
   display: flex;
@@ -916,6 +1040,28 @@ p {
   }
 }
 
+@media (max-width: 992px) {
+  .practices__preliminary,
+  .practices__advanced {
+    flex-direction: column;
+    right: 0;
+    left: 0;
+  }
+
+  .practices__image-summary,
+  .advancedpractices__image-summary {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+    right: 0;
+    top: auto;
+    transform: none;
+    margin-top: 40px;
+  }
+}
+
+
 .Accommodation {
   background-color: #f6f1ea;
   padding: 140px 0;
@@ -956,11 +1102,24 @@ p {
   }
 }
 
+@media (max-width: 768px) {
+  .blocks__item {
+    width: 100%;
+    max-width: 360px;
+    height: 520px;
+  }
+
+  .blocks__title,
+  .blocks__label {
+    font-size: 28px;
+  }
+}
+
+
 .blocks {
   display: flex;
   gap: 40px;
   justify-content: center;
-  flex-wrap: wrap;
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
@@ -1313,3 +1472,28 @@ p {
     justify-content: center;
   }
 }
+
+@media (max-width: 992px) {
+  .program-participation__card {
+    width: 90%;
+    height: auto;
+  }
+
+  .program-participation__content {
+    width: 100%;
+    padding: 80px 48px;
+  }
+
+  .program-participation__title h2,
+  .program-participation__title span {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+@media (max-width: 480px) {
+  .program-participation__content {
+    padding: 48px 24px;
+  }
+}
+
