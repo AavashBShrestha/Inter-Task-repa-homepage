@@ -9,6 +9,28 @@ import img7 from '../assets/img/Rectangle 68.png';
 import servicebackground from '../assets/img/Rectangle 74.png';
 import img8 from '../assets/img/Rectangle 41.png';
 import img9 from '../assets/img/Rectangle 43.png';
+import img10 from '../assets/img/HotelShangrilla1.png';
+import img11 from '../assets/img/HotelShangrilla2.png';
+import img12 from '../assets/img/HotelShangrilla3.png';
+import img13 from '../assets/img/Rectangle 24.png';
+
+const BLOCKS = [
+    {
+        id: "A",
+        title: "Block (Building)",
+        image: img10,
+    },
+    {
+        id: "B",
+        title: "Block (Building)",
+        image: img11,
+    },
+    {
+        id: "C",
+        title: "Block (Building)",
+        image: img12,
+    },
+];
 
 const Home = () => {
     const aboutRef = useRef(null);
@@ -289,6 +311,28 @@ const Home = () => {
             </section>
 
             <section className="Accommodation">
+                <div className="accommodation__header">
+                    <p className="accommodation__label">ACCOMMODATION</p>
+                    <h1 className="accommodation__title">Your Stay <span className="accommodation__title-span">at Repa Retreat</span></h1>
+                </div>
+                <div className="blocks">
+                    {BLOCKS.map((block, index) => (
+                        <div className="blocks__item" key={`${block.id}-${index}`}>
+                            <img src={block.image} alt={`Block ${block.id}`} />
+                            <div className="accommodation__gradient"></div>
+                            <div className="blocks__overlay">
+                                <p className="blocks__title">{block.title}</p>
+                                <span className="blocks__label">{block.id}</span>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section className="feedback">
+                <div className="feedback__image">
+                    <img src={img13} alt="Feedback" />
+                </div>
                 
 
             </section>

@@ -445,7 +445,7 @@ p {
 }
 
 .quote {
-  background: url("../assets/img/Rectangle\ 39.png");
+  background: url("../assets/Banner/Rectangle\ 39.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -491,23 +491,25 @@ p {
   gap: 100px;
   position: relative;
   padding: 140px;
+  max-width: 1920px;
+  margin: 0 auto;
 
   &__summary {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 317px;
+    gap: 100px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .left__summary {
     display: flex;
     flex-direction: column;
-    width: 560px;
-    height: 221px;
-    top: 4935.22px;
-    left: 288.84px;
+    max-width: 560px;
     gap: 40px;
-    margin-left: 288px;
+    flex: 1;
+    min-width: 300px;
   }
 
   &__label {
@@ -541,6 +543,8 @@ p {
 
   &__description {
     max-width: 474.19px;
+    flex: 1;
+    min-width: 300px;
     p {
       font-family: $font-inter;
       color: $aboutrepa-primary-color;
@@ -554,28 +558,35 @@ p {
 .practices {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 150px;
   margin-top: 100px;
 
   &__preliminary {
-    font-family: $font-inter;
-    color: $aboutrepa-primary-color;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    width: 474.19px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    right: 88px;
+    gap: 50px;
+    min-height: 659px;
+    justify-content: flex-end;
   }
 
   &__image {
-    position: absolute;
-    right: 279px;
-    top: 555px;
-    width: 1130px;
+    position: relative;
+    flex: 1;
+    max-width: 1130px;
     height: 659px;
     border-radius: 20px;
     overflow: hidden;
     z-index: 0;
     background-color: rgba(0, 0, 0, 1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     .services__gradient {
       position: absolute;
       background-repeat: no-repeat;
@@ -585,20 +596,24 @@ p {
       top: 0;
       left: 0;
       width: 100%;
-      height: 659px;
+      height: 100%;
       z-index: 1;
     }
   }
 
   &__image-summary {
-    position: relative;
+    position: absolute;
     width: 533.59px;
+    max-width: 45%;
     height: 482.8px;
-    left: 117px;
-    top: 88px;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     background: #f6f1ea;
     border-radius: 10px;
     z-index: 2;
+    padding: 80px;
+    box-sizing: border-box;
   }
 
   &__image-context {
@@ -606,21 +621,19 @@ p {
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
-
-    position: absolute;
-    width: 372.7px;
-    height: 322px;
-    left: 80px;
-    top: 80px;
+    width: 100%;
+    height: 100%;
   }
 
   &__advanced {
-    font-family: $font-inter;
-    color: $aboutrepa-primary-color;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 32px;
-    width: 474.19px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    left: 88px;
+    min-height: 659px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 
     &-gradient {
       position: absolute;
@@ -631,20 +644,26 @@ p {
       top: 0;
       left: 0;
       width: 100%;
-      height: 659px;
+      height: 100%;
       z-index: 1;
     }
 
     &-image {
-      position: absolute;
-      right: 504px;
-      top: 1314px;
-      width: 1130px;
+      position: relative;
+      flex: 1;
+      max-width: 1130px;
       height: 659px;
       border-radius: 20px;
       overflow: hidden;
       z-index: 0;
       background-color: rgba(0, 0, 0, 1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       .practices__advanced-gradient {
         position: absolute;
         background-repeat: no-repeat;
@@ -654,22 +673,25 @@ p {
         top: 0;
         left: 0;
         width: 100%;
-        height: 659px;
+        height: 100%;
         z-index: 1;
       }
     }
   }
 
   .advancedpractices__image-summary {
-    position: relative;
+    position: absolute;
     width: 533.59px;
+    max-width: 45%;
     height: 482.8px;
-    right: -938px;
-    top: 270px;
-
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
     background: #f6f1ea;
     border-radius: 10px;
     z-index: 2;
+    padding: 80px;
+    box-sizing: border-box;
   }
 }
 
@@ -737,4 +759,130 @@ p {
       }
     }
   }
+}
+
+.Accommodation {
+  background-color: #f6f1ea;
+  padding: 140px 0;
+}
+
+.accommodation__header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.accommodation__label {
+  color: $aboutrepa-title-color;
+  font-family: $font-inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.accommodation__title {
+  font-family: $font-canela;
+  font-weight: 100;
+  font-style: Italic;
+  font-size: 72px;
+  color: $service-button-color;
+  line-height: 82px;
+  letter-spacing: 0px;
+  text-align: center;
+  &-span {
+    font-family: $font-canela;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 82px;
+    text-align: center;
+  }
+}
+
+.blocks {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.blocks__item {
+  position: relative;
+  width: 430px;
+  height: 671.84px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.5);
+  }
+}
+
+.blocks__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 52.4%;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 40px;
+
+  transition: height 0.6s ease, background 0.6s ease;
+}
+
+.blocks__item:hover .blocks__overlay {
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(59, 39, 19, 0) 0%,
+    rgba(59, 39, 19, 0.85) 100%
+  );
+}
+
+.blocks__title {
+  margin-bottom: 6px;
+  color: $primary-color;
+  font-family: $font-canela;
+  font-weight: 100;
+  font-style: Italic;
+  font-size: 42px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+.blocks__label {
+  font-family: $font-canela;
+  color: $primary-color;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: bottom;
 }
